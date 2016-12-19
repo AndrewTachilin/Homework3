@@ -10,11 +10,11 @@ function bizz(&$handle){
 
                 for ($i = 1; $i <= $result[2]; $i++) {
 
-                            if ($i % $result[0] == 0 && $i % $result[1] == 0) {
+                            if (!($i % $result[0]) && !($i % $result[1])) {
                                 echo "FB ";
-                            } elseif ($i % $result[0] == 0) {
+                            } elseif (!($i % $result[0])) {
                                 echo "F ";
-                            } elseif ($i % $result[1] == 0) {
+                            } elseif (!($i % $result[1])) {
                                 echo "B ";
                             } else {
                                 echo $i . " ";
@@ -29,3 +29,4 @@ function bizz(&$handle){
 
 }
 bizz($OpenFile);
+
